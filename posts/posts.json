@@ -4,20 +4,20 @@
       "description": "O Git é um sistema de controle de versão distribuído amplamente utilizado. Neste post, exploramos conceitos fundamentais e práticas recomendadas para um eficiente versionamento de código.",
       "author": "Seu Nome",
       "date": "2023-11-12",
-      "image": "../static/images/github-logo.jpeg"
+      "image": "github-logo.jpeg"
   },
   {
       "title": "Python: Uma Introdução",
       "description": "Python é uma linguagem de programação de alto nível conhecida por sua simplicidade e legibilidade. Descubra os conceitos básicos e por que Python é uma escolha popular entre os desenvolvedores.",
       "author": "Seu Nome",
       "date": "2023-11-13",
-      "image": "../static/images/python-logo.png"
+      "image": "python-logo.png"
   },
   {
       "title": "GitHub Pages: Hospedagem Simples de Sites",
       "description": "GitHub Pages é uma plataforma que permite hospedar sites diretamente de repositórios do GitHub. Aprenda a criar uma presença online rápida e fácil para sua documentação usando o GitHub Pages.",
       "author": "Seu Nome",
       "date": "2023-11-14",
-      "image": "../static/images/github-pages-logo.jpg"
+      "image": "github-pages-logo.jpg"
   }
 ]
