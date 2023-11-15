@@ -7,13 +7,6 @@
       "image": "github-logo.jpeg"
   },
   {
-      "title": "Python: Uma Introdução",
-      "description": "Python é uma linguagem de programação de alto nível conhecida por sua simplicidade e legibilidade. Descubra os conceitos básicos e por que Python é uma escolha popular entre os desenvolvedores.",
-      "author": "Seu Nome",
-      "date": "2023-11-13",
-      "image": "python-logo.png"
-  },
-  {
       "title": "GitHub Pages: Hospedagem Simples de Sites",
       "description": "GitHub Pages é uma plataforma que permite hospedar sites diretamente de repositórios do GitHub. Aprenda a criar uma presença online rápida e fácil para sua documentação usando o GitHub Pages.",
       "author": "Seu Nome",
