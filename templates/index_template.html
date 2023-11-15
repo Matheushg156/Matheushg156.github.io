@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Wiki/ Blog</title>
+</head>
+<body>
+
+    <header>
+        <h1>Wiki/ Blog</h1>
+    </header>
+
+    <section>
+        {{ content }}
+        <ul>
+          {% for post in posts %}
+              <li><a href="{{ post.title.replace(' ', '_') }}.html">{{ post.title }}</a></li>
+          {% endfor %}
+      </ul>
+    </section>
+
+    <footer>
+        <p>© 2023 Wiki/ Blog. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
