@@ -13,7 +13,7 @@
     </header>
 
     <section>
-        {{ content }}
+        {{ content|safe }}
         <ul>
           {% for post in posts %}
             <li><a href="{{ post.title.replace(' ', '_').replace('á', 'a').replace('ã', 'a').replace('é', 'e').replace('í', 'i').replace('ó', 'o').replace('ú', 'u').replace('ç', 'c').lower() }}.html">{{ post.title }}</a></li>

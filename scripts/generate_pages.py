@@ -1,8 +1,8 @@
 import json
 from jinja2 import Environment, FileSystemLoader
+import markdown2
 
 def remove_special_characters(text):
-    # Remove apenas os acentos, mantendo as letras com acento
     return text.replace(' ', '_').replace('á', 'a').replace('ã', 'a').replace('é', 'e').replace('í', 'i').replace('ó', 'o').replace('ú', 'u').replace('ç', 'c').lower()
 
 def generate_pages(posts_data):
@@ -15,8 +15,6 @@ def generate_pages(posts_data):
         author = post['author']
         date = post['date']
         image = post.get('image', '')
-
-        # Use a função para remover acentos no nome do arquivo
         file_name = remove_special_characters(title)
 
         html_content = template.render(title=title, description=description, author=author, date=date, image=image)
@@ -31,15 +29,19 @@ def generate_index_page(posts_data):
     with open(index_template_path, 'r') as template_file:
         template_content = template_file.read()
 
-    # Crie os links com remoção de acentos e minúsculas
+    with open('posts/post_documentation.md', 'r') as documentation_file:
+        documentation_content = markdown2.markdown(documentation_file.read())
+
     links = '\n'.join([
         f'<li><a href="{remove_special_characters(post["title"])}.html">{remove_special_characters(post["title"])}</a></li>' for post in posts_data
     ])
-    
+
     context = {
+        'content': documentation_content,
         'posts': posts_data,
         'links': links
     }
+
     updated_content = Environment(loader=FileSystemLoader('templates')).from_string(template_content).render(context)
 
     with open(docs_output_path, 'w') as output_file:
