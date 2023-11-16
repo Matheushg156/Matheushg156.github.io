@@ -1,0 +1,16 @@
+[
+  {
+      "title": "Introdução ao Versionamento de Código com Git",
+      "description": "O Git é um sistema de controle de versão distribuído amplamente utilizado. Neste post, exploramos conceitos fundamentais e práticas recomendadas para um eficiente versionamento de código.",
+      "author": "Seu Nome",
+      "date": "2023-11-12",
+      "image": "github-logo.jpeg"
+  },
+  {
+      "title": "GitHub Pages: Hospedagem Simples de Sites",
+      "description": "GitHub Pages é uma plataforma que permite hospedar sites diretamente de repositórios do GitHub. Aprenda a criar uma presença online rápida e fácil para sua documentação usando o GitHub Pages.",
+      "author": "Seu Nome",
+      "date": "2023-11-14",
+      "image": "github-pages-logo.jpg"
+  }
+]
