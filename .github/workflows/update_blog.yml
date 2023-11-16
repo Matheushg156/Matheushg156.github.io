@@ -34,5 +34,5 @@ jobs:
         git commit -m "Automated blog update" || echo "No changes to commit"
 
         # Utiliza o token de acesso pessoal (PAT) do secret para autenticação
-        git remote add origin_with_token "https://${{ secrets.ADA_TOKEN }}@github.com/${{ github.repository }}"
+        git remote add origin_with_token "https://${{ secrets.WIKI_TOKEN }}@github.com/${{ github.repository }}"
         git push --set-upstream origin_with_token main
