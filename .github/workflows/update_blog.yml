@@ -36,3 +36,6 @@ jobs:
         # Utiliza o token de acesso pessoal (PAT) do secret para autenticação
         git remote add origin_with_token "https://${{ secrets.WIKI_TOKEN }}@github.com/${{ github.repository }}"
         git push --set-upstream origin_with_token main
+        
+        # Push para o branch gh-pages
+        git push origin_with_token main:gh-pages
