@@ -27,7 +27,9 @@ jobs:
         run: python scripts/generate_pages.py
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: ./docs
-          personal_token: ${{ secrets.WIKI_TOKEN }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Automated blog update" || echo "No changes to commit"
+          git push origin main
