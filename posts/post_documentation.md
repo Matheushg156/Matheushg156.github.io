@@ -1,5 +1,13 @@
 # Bem-Vindo ao Nosso Wiki/ Blog!
 
+## Colaboradores do Projeto
+
+- Davi Oliveira
+- João Paulo Pereira
+- Marcos Henriques
+- Matheus Henrique Gonzaga
+- Rafael Delfino
+
 ## Estrutura do Projeto
 
 O nosso projeto Wiki/ Blog foi estruturado de maneira organizada para facilitar o desenvolvimento, manutenção e documentação. Aqui está uma visão geral da estrutura atual:
