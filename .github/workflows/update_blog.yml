@@ -28,14 +28,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Build Site
-      run: python scripts/generate_pages.py
+    - name: Generate Pages
+      run: python3 scripts/generate_pages.py
 
-    - name: Archive Site
-      uses: actions/upload-artifact@v2
+    - name: Upload Artifact
+      uses: actions/upload-pages-artifact@v2
       with:
         name: blog-artifact
-        path: _site
+        path: ./docs
 
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v2
