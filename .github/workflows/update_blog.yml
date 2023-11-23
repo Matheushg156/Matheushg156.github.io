@@ -1,9 +1,9 @@
 name: Update Blog
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -35,3 +35,4 @@ jobs:
       uses: actions/deploy-pages@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
