@@ -32,7 +32,7 @@ jobs:
       run: python scripts/generate_pages.py
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v2
+      uses: aactions/upload-pages-artifact@v2
       with:
         name: blog-artifact
         path: ./docs
@@ -40,5 +40,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v2
       with:
-        token: ${{ secrets.WIKI_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         artifact_name: blog-artifact
