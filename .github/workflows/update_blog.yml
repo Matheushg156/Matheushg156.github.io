@@ -31,8 +31,14 @@ jobs:
     - name: Generate Pages
       run: python scripts/generate_pages.py
 
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: blog-artifact
+        path: ./docs
+
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs
+        artifact_name: blog-artifact
