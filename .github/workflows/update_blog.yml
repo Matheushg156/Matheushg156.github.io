@@ -29,16 +29,11 @@ jobs:
         pip install -r requirements.txt
 
     - name: Generate Pages
-      run: python3 scripts/generate_pages.py
-
-    - name: Upload Artifact
-      uses: actions/upload-pages-artifact@v2
-      with:
-        name: blog-artifact
-        path: ./docs
+      run: python scripts/generate_pages.py
 
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         artifact_name: blog-artifact
+        path: ./docs
